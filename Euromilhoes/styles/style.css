@@ -1,0 +1,192 @@
+/* --------------------------------- PAGE --------------------------------- */
+
+body{
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    background-image: url(../img/bg.jpg);
+}
+
+.git {
+    border-radius: 22px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 15px;
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+/* --------------------------------- CARDS --------------------------------- */
+
+.flip-card{
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    display: table-cell;
+
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:active .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner{
+    cursor: pointer;
+}
+
+/* --------------------------------- NUMBERS --------------------------------- */
+
+.flip-card-front, 
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.flip-card-front{
+    background-image: linear-gradient(45deg, #1B51A1, #83A5D8);
+
+}
+
+
+.flip-card-front h1{
+    text-align: center;
+    font-size: 80px;
+}
+
+.flip-card-back{
+    background-image: linear-gradient(315deg, #1B51A1, #83A5D8);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h1{
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.numbers{
+    display: table;
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.numbers-center{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+
+}
+
+/* --------------------------------- STARS --------------------------------- */
+
+
+.flip-card-front-stars, 
+.flip-card-back-stars{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.flip-card-front-stars{
+    background-image: linear-gradient(45deg, #BC9D06, #FFEC91);
+
+}
+
+
+.flip-card-front-stars h1{
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.flip-card-back-stars{
+    background-image: linear-gradient(315deg, #BC9D06, #FFEC91);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back-stars h1{
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.stars{
+    display: table;
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.stars-center{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+
+/* --------------------------------- BUTTON --------------------------------- */
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+   }
+   
+   button:hover {
+    color: rgb(255, 255, 255);
+   }
+   
+   button:after {
+    content: "";
+    background: rgb(0, 0, 0);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+
